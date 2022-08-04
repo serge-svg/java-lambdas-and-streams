@@ -9,24 +9,15 @@ public class Main {
         personList.add(new Person("name1", "ccc", 31));
         personList.add(new Person("name2", "aaa", 22));
         personList.add(new Person("name3", "bbb", 33));
+        personList.add(new Person("name4", "ddd", 66));
 
-        // Examples using specific search methods
-        List<Person> list = searchPersonByName("name3", personList);
-        printList(list);
-        list = searchPersonBySurname("aaa", personList);
-        printList(list);
-
-        // Examples using interface and classes with a single search method
-        list = searchPersonByFilter(new PersonFilterByName("name3"), personList);
-        printList(list);
-        list = searchPersonByFilter(new PersonFilterBySurname("ccc"), personList);
+        PersonFilter personFilterByName_name2 = new PersonFilterByName("name2");
+        PersonFilter personFilterByName_name2_Or_Surname_bbb = personFilterByName_name2.or(new PersonFilterBySurname("bbb"));
+        List<Person> list = searchPersonByFilter(personFilterByName_name2_Or_Surname_bbb, personList);
         printList(list);
 
-        // Examples using lambdas with inference type. In this case classes PersonFilterBy.. could be avoided,
-        // just the interface is needed and can be used because it is a functional interface 'interface with a single method'
-        list = searchPersonByFilter((p) -> p.getName().equals("name1"), personList);
-        printList(list);
-        list = searchPersonByFilter((p) -> p.getSurname().equals("aaa"), personList);
+        PersonFilter personFilterByName_name2_Or_Surname_bbb_Or_isRetired = personFilterByName_name2.or(Person::isRetired);
+        list = searchPersonByFilter(personFilterByName_name2_Or_Surname_bbb_Or_isRetired, personList);
         printList(list);
 
     }
@@ -39,7 +30,6 @@ public class Main {
                 filteredList.add(person);
             }
         }
-
         return filteredList;
     }
 
@@ -71,5 +61,6 @@ public class Main {
             System.out.printf("Person: %s %s %s %n", person.getName(), person.getSurname(), person.getAge());
         }
     }
+
 
 }
