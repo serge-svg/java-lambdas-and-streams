@@ -11,12 +11,15 @@ public class Main {
         personList.add(new Person("name3", "bbb", 33));
         personList.add(new Person("name4", "ddd", 66));
 
-        PersonFilter personFilterByName_name2 = new PersonFilterByName("name2");
-        PersonFilter personFilterByName_name2_Or_Surname_bbb = personFilterByName_name2.or(new PersonFilterBySurname("bbb"));
-        List<Person> list = searchPersonByFilter(personFilterByName_name2_Or_Surname_bbb, personList);
+        Filter<Person> personFilterByName_name2 = new PersonFilterByName("name2");
+        List<Person> list = searchPersonByFilter(personFilterByName_name2, personList);
         printList(list);
 
-        PersonFilter personFilterByName_name2_Or_Surname_bbb_Or_isRetired = personFilterByName_name2_Or_Surname_bbb.or(Person::isRetired);
+        Filter<Person> personFilterByName_name2_Or_Surname_bbb = personFilterByName_name2.or(new PersonFilterBySurname("bbb"));
+        list = searchPersonByFilter(personFilterByName_name2_Or_Surname_bbb, personList);
+        printList(list);
+
+        Filter personFilterByName_name2_Or_Surname_bbb_Or_isRetired = personFilterByName_name2_Or_Surname_bbb.or(Person::isRetired);
         list = searchPersonByFilter(personFilterByName_name2_Or_Surname_bbb_Or_isRetired, personList);
         printList(list);
 
@@ -44,7 +47,7 @@ public class Main {
         return filteredList;
     }
 
-    public static List<Person> searchPersonByFilter(PersonFilter personFilter, List<Person> personList) {
+    public static List<Person> searchPersonByFilter(Filter personFilter, List<Person> personList) {
 
         List<Person> filteredList = new ArrayList<>();
         for (Person person : personList) {
