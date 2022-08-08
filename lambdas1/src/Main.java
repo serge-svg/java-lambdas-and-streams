@@ -23,11 +23,11 @@ public class Main {
         personList.sort(new ComparatorSurname());
         printList(personList);
 
-        System.out.println("Sort by comparing ages with Anonymous class");
+        System.out.println("Sort by comparing ages with an anonymous class");
         personList.sort(new Comparator<Person>() {
             public int compare(Person person1, Person person2) {
                 int result = 0;
-                if (person1.getAge() > person2.getAge()) {
+                if (person1. getAge() > person2.getAge()) {
                     result = 1;
                 } else if (person1.getAge() < person2.getAge()) {
                     result = -1;
@@ -37,7 +37,7 @@ public class Main {
         });
         printList(personList);
 
-        System.out.println("Sort by comparing ages with lambda expression");
+        System.out.println("Sort by comparing ages with a lambda expression");
         personList.sort((Person person1, Person person2) -> {
             int result = 0;
             if (person1.getAge() > person2.getAge()) {
@@ -49,17 +49,17 @@ public class Main {
         });
         printList(personList);
 
-        System.out.println("Comparing with lambda expression by name");
+        System.out.println("Sort by comparing names with a lambda expression");
         personList.sort((Person person1, Person person2) -> {
             return person1.getName().compareTo(person2.getName());
         });
         printList(personList);
 
-        System.out.println("Comparing with lambda expression by name,\nusing type inference and simplifying");
+        System.out.println("Sort by comparing names with a lambda expression,\nusing type inference and  a lambda expression simplified");
         personList.sort((person1, person2) -> person1.getName().compareTo(person2.getName()));
         printList(personList);
 
-        System.out.println("Comparing with lambda expression by name,\nusing Comparator.comparing with method reference");
+        System.out.println("Sort by comparing names with a lambda expression,\nusing Comparator.comparing with method reference");
         personList.sort(Comparator.comparing(Person::getName));
         printList(personList);
 
