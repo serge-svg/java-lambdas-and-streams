@@ -11,19 +11,19 @@ public class Main {
         personList.add(new Person("name2", "aaa", 22));
         personList.add(new Person("name3", "bbb", 33));
 
-        System.out.println("Comparing with Comparable interface by age");
+        System.out.println("Sort by comparing ages with Comparable interface");
         Collections.sort(personList);
         printList(personList);
 
-        System.out.println("Comparing with Comparator interface by name");
+        System.out.println("Sort by comparing names with Comparator interface");
         personList.sort(new ComparatorName());
         printList(personList);
 
-        System.out.println("Comparing with Comparator interface by surname");
+        System.out.println("Sort by comparing surnames with Comparator interface");
         personList.sort(new ComparatorSurname());
         printList(personList);
 
-        System.out.println("Comparing with anonymous class by age");
+        System.out.println("Sort by comparing ages with Anonymous class");
         personList.sort(new Comparator<Person>() {
             public int compare(Person person1, Person person2) {
                 int result = 0;
@@ -37,8 +37,8 @@ public class Main {
         });
         printList(personList);
 
-        System.out.println("Comparing with lambda expression by age");
-        personList.sort((Person person1, Person person2)->{
+        System.out.println("Sort by comparing ages with lambda expression");
+        personList.sort((Person person1, Person person2) -> {
             int result = 0;
             if (person1.getAge() > person2.getAge()) {
                 result = 1;
@@ -50,13 +50,13 @@ public class Main {
         printList(personList);
 
         System.out.println("Comparing with lambda expression by name");
-        personList.sort((Person person1, Person person2)->{
+        personList.sort((Person person1, Person person2) -> {
             return person1.getName().compareTo(person2.getName());
         });
         printList(personList);
 
         System.out.println("Comparing with lambda expression by name,\nusing type inference and simplifying");
-        personList.sort((person1, person2)->person1.getName().compareTo(person2.getName()));
+        personList.sort((person1, person2) -> person1.getName().compareTo(person2.getName()));
         printList(personList);
 
         System.out.println("Comparing with lambda expression by name,\nusing Comparator.comparing with method reference");
