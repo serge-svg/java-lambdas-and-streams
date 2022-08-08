@@ -1,3 +1,3 @@
 # java-lambdas1
-Module - lambdas2: This module provides usage examples of how to sort by using the  interfaces comparable and comparator and how
-it can be simplified using lambda expressions.
+Module - lambdas1: This module provides usage examples of how to sort by comparing values using the interfaces comparable,
+comparator and an anonymous class. And how it can be simplified using lambda expressions.
