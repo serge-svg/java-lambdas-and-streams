@@ -1,6 +1,6 @@
 package com.svg.java.streams7.optionals;
 
-import com.svg.java.domain.Person;
+import com.svg.java.lambdas.functionalinterfaces.domain.Person;
 import com.svg.java.services.PersonService;
 
 import java.util.List;

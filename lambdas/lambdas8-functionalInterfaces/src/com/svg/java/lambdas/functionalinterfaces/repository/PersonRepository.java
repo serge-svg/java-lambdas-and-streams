@@ -1,4 +1,4 @@
-package com.svg.java.repository;
+package com.svg.java.lambdas.functionalinterfaces.repository;
 
 import com.svg.java.lambdas.functionalinterfaces.domain.Person;
 

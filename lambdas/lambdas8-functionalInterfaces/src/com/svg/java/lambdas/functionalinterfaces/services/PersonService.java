@@ -1,7 +1,7 @@
-package com.svg.java.services;
+package com.svg.java.lambdas.functionalinterfaces.services;
 
 import com.svg.java.lambdas.functionalinterfaces.domain.Person;
-import com.svg.java.repository.PersonRepository;
+import com.svg.java.lambdas.functionalinterfaces.repository.PersonRepository;
 
 import java.util.List;
 import java.util.Optional;
