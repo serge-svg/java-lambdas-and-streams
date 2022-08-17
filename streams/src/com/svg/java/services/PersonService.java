@@ -3,8 +3,8 @@ package com.svg.java.services;
 import com.svg.java.domain.Person;
 import com.svg.java.repository.PersonRepository;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class PersonService {
@@ -21,5 +21,10 @@ public class PersonService {
                 .collect(Collectors.toList());
     }
 
+    public Optional<Person> getFirstPersonByName(String name) {
+        return getAll().stream()
+                .filter((p) -> (p.name().contentEquals(name)))
+                .findFirst();
+    }
 
 }

@@ -3,7 +3,6 @@ package com.svg.java.streams5.reduces;
 import com.svg.java.domain.Person;
 import com.svg.java.services.PersonService;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalInt;
 

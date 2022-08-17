@@ -3,10 +3,7 @@ package com.svg.java.streams6.collectors;
 import com.svg.java.domain.Person;
 import com.svg.java.services.PersonService;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.OptionalInt;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
