@@ -1,11 +1,10 @@
 package com.svg.java.sorting;
 
-public class Person implements Comparable<Person>{
+public class Person implements Comparable<Person> {
     private final String name;
-
     private final String surname;
-
     private final Integer age;
+
     public Person(String name, String surnames, int age) {
         this.name = name;
         this.surname = surnames;

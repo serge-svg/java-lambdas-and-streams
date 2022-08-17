@@ -23,7 +23,6 @@ public class Main {
     }
 
     private static List<Person> searchPersonByFilter(PersonFilter personFilter, List<Person> personList) {
-
         List<Person> filteredList = new ArrayList<>();
         for (Person person : personList) {
             if (personFilter.test(person)) {
@@ -34,11 +33,11 @@ public class Main {
     }
 
     private static void printList(List<Person> personList, String message) {
-
         for (Person person : personList) {
             System.out.printf("Person: %s %s %s %s %n", person.name(), person.surname(), person.age(), message);
         }
     }
+
     record Person(String name, String surname, Integer age) {
 
         public static boolean isRetired(Person person) {
