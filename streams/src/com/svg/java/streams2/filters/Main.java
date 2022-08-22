@@ -1,6 +1,6 @@
 package com.svg.java.streams2.filters;
 
-import com.svg.java.lambdas.functionalinterfaces.domain.Person;
+import com.svg.java.lambdas.domain.Person;
 import com.svg.java.services.PersonService;
 
 import java.util.List;

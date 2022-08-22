@@ -1,6 +1,6 @@
-package com.svg.java.lambdas.functionalinterfaces.repository;
+package com.svg.java.lambdas.repository;
 
-import com.svg.java.lambdas.functionalinterfaces.domain.Person;
+import com.svg.java.lambdas.domain.Person;
 
 import java.util.ArrayList;
 import java.util.List;

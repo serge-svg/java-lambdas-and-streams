@@ -1,7 +1,7 @@
 package com.svg.java.lambdas.functionalinterfaces.consumer;
 
-import com.svg.java.lambdas.functionalinterfaces.domain.Person;
-import com.svg.java.lambdas.functionalinterfaces.services.PersonService;
+import com.svg.java.lambdas.domain.Person;
+import com.svg.java.lambdas.services.PersonService;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -23,6 +23,7 @@ public class Main {
         Consumer<Person> consumerName = (p)-> System.out.println(p.name());
         personList.stream().forEach(consumerName);
 
+
         // Functional Interface - Consumer surname
         personList.stream().forEach(Main::printSurname);
 
@@ -33,6 +34,7 @@ public class Main {
         Consumer<Person> combinedConsumer =  consumerName.andThen(consumerSurname);
         personList.stream().forEach(combinedConsumer);
 
+        consumerName.accept(new Person("Leo", "Messi", 10));
     }
 
     private static void printSurname(Person person) {

@@ -1,6 +1,6 @@
 package com.svg.java.streams7.optionals;
 
-import com.svg.java.lambdas.functionalinterfaces.domain.Person;
+import com.svg.java.lambdas.domain.Person;
 import com.svg.java.services.PersonService;
 
 import java.util.List;
@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         PersonService personService = new PersonService();
         List<Person> personList = personService.getAll();
+
         personList.stream().forEach((p) -> {System.out.println(p.name());});
 
         Optional<Person> personName = personService.getFirstPersonByName("name2");

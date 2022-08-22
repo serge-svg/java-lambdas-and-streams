@@ -40,16 +40,16 @@ Streams obtained from collections or arrays do not modify the source, but the so
 A terminal operation is needed to run any intermediates.
 Some operations are short-circuit: at a given point they prevent from processing more elements → they may be used on infinite streams without hanging
 Reductions are a special type of terminal operation where all of the contents of the stream are combined into a single primitive or Object
-long count() → returns the number of elements in the stream. For infinite streams, it hangs. It is a reduction
-Optional<T> min(Comparator <? super T> c) → Returns the minimum element in the stream using the given comparator. For infinite streams, it hangs. It is a reduction
-Optional<T> max(Comparator <? super T> c) → Returns the maximum element in the stream using the given comparator. For infinite streams, it hangs. It is a reduction
-Optional<T> findAny() → returns an element of the stream. Is a short-circuit operation.
-Optional<T> findFirst() → returns the first element of the stream. Is a short-circuit operation.
-boolean anyMatch(Predicate <? super T> p) → returns true if there is at least one element that matches the predicate on the Stream. Is short-circuit only if there is such element.
-boolean allMatch(Predicate <? super T> p) → returns true if all elements match the predicate on the Stream. Is short-circuit only if there is one or more elements not matching.
-boolean noneMatch(Predicate <? super T> p) → returns true if there is no element that matches the predicate on the Stream. Is short-circuit only if there is one or more element matching.
-void forEach(Consumer <? super T> c) → runs the given consumer for each element in the stream.
-T reduce (T identity, BinaryOperator<T> accumulator) → It is a reduction operation, which combines all elements in the Stream into a single T, starting with the identity given and by calling the accumulator with the previous accumulated value, and the current element.
-Optional<T> reduce (BinaryOperator<T> accumluator) → It is a reduction operation, combining all the elements using the given accumulator, and returning an optional (empty if no elements)
-<U> U reduce(U identity, BiFunction<U, ? super T, U> accumulator, BinaryOperator<U> combiner) → Combines all T in the stream into some U's, and then combines all those U's into a single one. It is a reduction, that makes sense mostly for parallel processing.
-Collect →It is a reduction operation (a mutable reduction), may get complex. In next sessions
+* long count() → returns the number of elements in the stream. For infinite streams, it hangs. It is a reduction
+* Optional<T> min(Comparator <? super T> c) → Returns the minimum element in the stream using the given comparator. For infinite streams, it hangs. It is a reduction
+* Optional<T> max(Comparator <? super T> c) → Returns the maximum element in the stream using the given comparator. For infinite streams, it hangs. It is a reduction
+* Optional<T> findAny() → returns an element of the stream. Is a short-circuit operation.
+* Optional<T> findFirst() → returns the first element of the stream. Is a short-circuit operation.
+* boolean anyMatch(Predicate <? super T> p) → returns true if there is at least one element that matches the predicate on the Stream. Is short-circuit only if there is such element.
+* boolean allMatch(Predicate <? super T> p) → returns true if all elements match the predicate on the Stream. Is short-circuit only if there is one or more elements not matching.
+* boolean noneMatch(Predicate <? super T> p) → returns true if there is no element that matches the predicate on the Stream. Is short-circuit only if there is one or more element matching.
+* void forEach(Consumer <? super T> c) → runs the given consumer for each element in the stream.
+* T reduce (T identity, BinaryOperator<T> accumulator) → It is a reduction operation, which combines all elements in the Stream into a single T, starting with the identity given and by calling the accumulator with the previous accumulated value, and the current element.
+* Optional<T> reduce (BinaryOperator<T> accumluator) → It is a reduction operation, combining all the elements using the given accumulator, and returning an optional (empty if no elements)
+* '<U> U reduce(U identity, BiFunction <U , ? super T, U> accumulator, BinaryOperator<U> combiner)' → Combines all T in the stream into some U's, and then combines all those U's into a single one. It is a reduction, that makes sense mostly for parallel processing.
+* Collect →It is a reduction operation (a mutable reduction), may get complex. In next sessions

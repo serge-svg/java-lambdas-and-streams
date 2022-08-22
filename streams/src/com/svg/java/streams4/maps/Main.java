@@ -1,6 +1,6 @@
 package com.svg.java.streams4.maps;
 
-import com.svg.java.lambdas.functionalinterfaces.domain.Person;
+import com.svg.java.lambdas.domain.Person;
 import com.svg.java.services.PersonService;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public class Main {
     }
 
     private static void print(String value) {
-        System.out.printf("The value is: %s\n", value);
+        System.out.printf("The value is: %s %n", value);
     }
 
 }

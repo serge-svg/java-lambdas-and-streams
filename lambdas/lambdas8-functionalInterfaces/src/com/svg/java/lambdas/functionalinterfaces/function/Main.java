@@ -1,12 +1,10 @@
 package com.svg.java.lambdas.functionalinterfaces.function;
 
-import com.svg.java.lambdas.functionalinterfaces.domain.Person;
-import com.svg.java.lambdas.functionalinterfaces.services.PersonService;
+import com.svg.java.lambdas.domain.Person;
+import com.svg.java.lambdas.services.PersonService;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 /*
   Functional interface Function, represents a function that accepts one argument and produces a result.
