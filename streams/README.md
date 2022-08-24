@@ -30,7 +30,7 @@ Streams obtained from collections or arrays do not modify the source, but the so
 * skip(int skipped) → returns a new Stream which is missing the first skipped elements
 * sorted()/sorted(Comparator<? super T> c) → returns a new Stream with its elements sorted. If no comparator is provided, and the elements are not Comparable, ClassCastException.
 * peek(Consumer <? super T> c) → returns a new Stream that has the same elements, but applies the consumer to each of the elements. The stream is not changed, the elements may be changed, depending on what does the consumer.
-* map(Function <? super T, ? extends R> f) → returns a new Stream of another type (R), by converting each T of the Stream to an R using the given function.
+* map(Function <? super T, ? extends R> f) → returns a new Stream of another type R, by converting each T of the Stream to an R using the given function.
 * flatMap(Function <? super T, ? extends Stream<? extends R>> f) → returns a new Stream of another type R which combines all the streams generated from each T using the function provided
 
 **Intermediate operations may be stateful (result depends on other processed stream elements) or stateless (result is independent of previuosly processed elements)
@@ -51,5 +51,5 @@ Reductions are a special type of terminal operation where all of the contents of
 * void forEach(Consumer <? super T> c) → runs the given consumer for each element in the stream.
 * T reduce (T identity, BinaryOperator<T> accumulator) → It is a reduction operation, which combines all elements in the Stream into a single T, starting with the identity given and by calling the accumulator with the previous accumulated value, and the current element.
 * Optional<T> reduce (BinaryOperator<T> accumluator) → It is a reduction operation, combining all the elements using the given accumulator, and returning an optional (empty if no elements)
-* '<U> U reduce(U identity, BiFunction <U , ? super T, U> accumulator, BinaryOperator<U> combiner)' → Combines all T in the stream into some U's, and then combines all those U's into a single one. It is a reduction, that makes sense mostly for parallel processing.
+* U reduce(U identity, BiFunction <U, ? super T, U> accumulator, BinaryOperator U combiner) → Combines all T in the stream into some U's, and then combines all those U's into a single one. It is a reduction, that makes sense mostly for parallel processing.  
 * Collect →It is a reduction operation (a mutable reduction), may get complex. In next sessions

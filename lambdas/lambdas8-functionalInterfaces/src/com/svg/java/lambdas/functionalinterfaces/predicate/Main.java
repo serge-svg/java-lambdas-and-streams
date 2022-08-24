@@ -1,7 +1,7 @@
 package com.svg.java.lambdas.functionalinterfaces.predicate;
 
 import com.svg.java.lambdas.domain.Person;
-import com.svg.java.lambdas.services.PersonService;
+import com.svg.java.lambdas.service.PersonService;
 
 import java.util.List;
 import java.util.function.Predicate;

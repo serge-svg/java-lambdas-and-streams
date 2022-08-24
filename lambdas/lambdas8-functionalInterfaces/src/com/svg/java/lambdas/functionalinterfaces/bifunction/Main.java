@@ -2,7 +2,7 @@ package com.svg.java.lambdas.functionalinterfaces.bifunction;
 
 import com.svg.java.lambdas.domain.Document;
 import com.svg.java.lambdas.domain.Versionable;
-import com.svg.java.lambdas.services.DocumentService;
+import com.svg.java.lambdas.service.DocumentService;
 
 import java.util.List;
 

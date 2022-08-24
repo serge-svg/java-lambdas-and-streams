@@ -22,7 +22,7 @@ public class Main {
                 .reduce(0, (age1, age2) -> age1 + age2);
         System.out.printf("Result: %s %n", result1);
 
-        // Reduce adding up optinalInt values
+        // Reduce adding up optionalInt values
         OptionalInt result2 = personList.stream()
                 .mapToInt(person -> person.age())
                 .reduce((age1, age2)-> age1 + age2);

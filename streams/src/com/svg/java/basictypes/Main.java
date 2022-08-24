@@ -1,13 +1,11 @@
 package com.svg.java.basictypes;
 
 import com.svg.java.lambdas.domain.Person;
-import com.svg.java.lambdas.services.PersonService;
-import org.w3c.dom.ls.LSOutput;
+import com.svg.java.lambdas.service.PersonService;
 
 import java.util.List;
 import java.util.OptionalInt;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Main {
 

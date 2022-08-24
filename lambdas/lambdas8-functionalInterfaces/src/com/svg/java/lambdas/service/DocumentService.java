@@ -1,4 +1,4 @@
-package com.svg.java.lambdas.services;
+package com.svg.java.lambdas.service;
 
 import com.svg.java.lambdas.domain.Document;
 import com.svg.java.lambdas.repository.DocumentRepository;
