@@ -19,12 +19,12 @@ public class Main {
         // Example using stream.peek
         personList.stream()
                 .peek(System.out::println)
-                .filter((Person p) -> p.age() < 35)
+                .filter((Person p) -> p.getAge() < 35)
                 .forEach(Main::print);
     }
 
     private static void print(Person p) {
-        System.out.printf("This person is: %s %s %s %n", p.name(), p.surname(), p.age());
+        System.out.printf("This person is: %s %s %s %n", p.getName(), p.getSurname(), p.getAge());
     }
 
 }

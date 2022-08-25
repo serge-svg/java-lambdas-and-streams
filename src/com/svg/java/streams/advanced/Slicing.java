@@ -22,7 +22,7 @@ public class Slicing {
         personList.stream().skip(2).forEach(System.out::println);
 
         System.out.println("Print all person older than 30 except the first");
-        personList.stream().filter(p -> p.age() > 30).skip(1).forEach(System.out::println);
+        personList.stream().filter(p -> p.getAge() > 30).skip(1).forEach(System.out::println);
 
 
 

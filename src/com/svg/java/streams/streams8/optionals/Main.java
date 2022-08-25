@@ -1,4 +1,4 @@
-package com.svg.java.streams.streams7.optionals;
+package com.svg.java.streams.streams8.optionals;
 
 
 import com.svg.java.streams.domain.Person;
@@ -12,7 +12,7 @@ public class Main {
         PersonService personService = new PersonService();
         List<Person> personList = personService.getAll();
 
-        personList.stream().forEach((p) -> {System.out.println(p.name());});
+        personList.stream().forEach((p) -> {System.out.println(p.getName());});
 
         Optional<Person> personName = personService.getFirstPersonByName("name2");
         if (personName.isPresent()) {

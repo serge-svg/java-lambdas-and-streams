@@ -1,4 +1,4 @@
-package com.svg.java.streams.streams5.reduces;
+package com.svg.java.streams.streams6.reduces;
 
 import com.svg.java.streams.domain.Person;
 import com.svg.java.streams.services.PersonService;
@@ -18,13 +18,13 @@ public class Main {
 
         // Reduce adding up int values
         int result1 = personList.stream()
-                .mapToInt(person -> person.age())
+                .mapToInt(person -> person.getAge())
                 .reduce(0, (age1, age2) -> age1 + age2);
         System.out.printf("Result: %s %n", result1);
 
         // Reduce adding up optionalInt values
         OptionalInt result2 = personList.stream()
-                .mapToInt(person -> person.age())
+                .mapToInt(person -> person.getAge())
                 .reduce((age1, age2)-> age1 + age2);
         System.out.printf("Result: %s %n", result2);
 

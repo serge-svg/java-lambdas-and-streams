@@ -13,7 +13,7 @@ public class Main {
 
         // Example using stream.filter and its own method reference to print the result
         personList.stream()
-                .filter((Person p) -> p.age() > 65)
+                .filter((Person p) -> p.getAge() > 65)
                 .forEach(Main::print);
 
         // Example using stream.filter with a method reference to filter, and an override
@@ -25,7 +25,7 @@ public class Main {
     }
 
     private static void print(Person p) {
-        System.out.printf("This person is: %s %s %s %n", p.name(), p.surname(), p.age());
+        System.out.printf("This person is: %s %s %s %n", p.getName(), p.getSurname(), p.getAge());
     }
 
 }

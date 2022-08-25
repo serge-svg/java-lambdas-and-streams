@@ -1,4 +1,4 @@
-package com.svg.java.streams.streams6.collectors;
+package com.svg.java.streams.streams7.collectors;
 
 import com.svg.java.streams.domain.Person;
 import com.svg.java.streams.services.PersonService;
@@ -20,7 +20,7 @@ public class Main {
         Stream<Person> myStream = personList.stream();
         //myStream.filter((p) -> p.age() > 30).forEach(System.out::println);
 
-        List<Person> myList = myStream.filter((p) -> p.age() > 30)
+        List<Person> myList = myStream.filter((p) -> p.getAge() > 30)
                 .collect(Collectors.toList());
         for (Person person : myList) {
             System.out.println(person.toString());

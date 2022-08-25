@@ -18,13 +18,13 @@ public class PersonService {
 
     public List<Person> getPersonByName(String name) {
         return getAll().stream()
-                .filter((p)->(p.name().contentEquals(name)))
+                .filter((p)->(p.getName().contentEquals(name)))
                 .collect(Collectors.toList());
     }
 
     public Optional<Person> getFirstPersonByName(String name) {
         return getAll().stream()
-                .filter((p) -> (p.name().contentEquals(name)))
+                .filter((p) -> (p.getName().contentEquals(name)))
                 .findFirst();
     }
 

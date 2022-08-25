@@ -1,4 +1,4 @@
-package com.svg.java.lambdas.referencemethods;
+package com.svg.java.lambdas.methodsreference;
 
 import java.util.ArrayList;
 import java.util.List;

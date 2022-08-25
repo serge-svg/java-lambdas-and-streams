@@ -19,7 +19,7 @@ public class Main {
         List<Person> personList = personService.getAll();
 
         // Example using System.out.printf
-        personList.stream().forEach(e -> System.out.printf("This person is: %s %s %s %n", e.name(), e.surname(), e.age()));
+        personList.stream().forEach(e -> System.out.printf("This person is: %s %s %s %n", e.getName(), e.getSurname(), e.getAge()));
         // Example using toString
         personList.stream().forEach(e -> System.out.println("Element value is:" + e));
         // Example using toString with method reference
@@ -30,7 +30,7 @@ public class Main {
     }
 
     private static void print(Person person) {
-        System.out.printf("This person is: %s %s %s %n", person.name(), person.surname(), person.age());
+        System.out.printf("This person is: %s %s %s %n", person.getName(), person.getSurname(), person.getAge());
     }
 
 }

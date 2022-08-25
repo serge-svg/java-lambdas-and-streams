@@ -3,7 +3,10 @@ package com.svg.java.streams.streams4.maps;
 import com.svg.java.streams.domain.Person;
 import com.svg.java.streams.services.PersonService;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /*
     map(Function <? super T, ? extends R> f) → returns a new Stream of another type (R),
@@ -17,13 +20,21 @@ public class Main {
 
         // Example using stream.map
         personList.stream()
-                .map((p) -> (p.name().toUpperCase()))
+                .map((p) -> (p.getName().toUpperCase()))
                 //.forEach(System.out::println);
                 .forEach(Main::print);
+
+        List<Integer> numeros = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4)); // [1, 2, 3, 4]
+
+        numeros.stream()
+                .map(x -> x * x)
+                .forEach(System.out::println);
+
     }
 
     private static void print(String value) {
         System.out.printf("The value is: %s %n", value);
     }
+
 
 }
