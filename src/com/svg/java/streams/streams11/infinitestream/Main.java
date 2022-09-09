@@ -1,7 +1,6 @@
 package com.svg.java.streams.streams11.infinitestream;
 
 import java.util.Optional;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Main {

@@ -2,7 +2,6 @@ package com.svg.java.streams.streams5.flatmaps;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class MainForTraveler {
     /*

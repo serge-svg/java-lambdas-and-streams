@@ -6,7 +6,6 @@ import com.svg.java.streams.services.PersonService;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /*
     map(Function <? super T, ? extends R> f) → returns a new Stream of another type (R),

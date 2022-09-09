@@ -3,12 +3,8 @@ package com.svg.java.streams.advanced;
 import com.svg.java.streams.domain.Person;
 import com.svg.java.streams.services.PersonService;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.OptionalInt;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class MinMaxTotalCount {
 

@@ -1,7 +1,9 @@
 package com.svg.java.streams.streams9.io;
 
 import java.util.stream.Stream;
-
+/*
+    This example creates a list of even numbers up to a set limit
+ */
 public class StreamBuilder {
     public static void main(String[] args) {
         Stream<Integer> myStream = streamNumbers(10);

@@ -1,7 +1,6 @@
 package com.svg.java.streams.advanced;
 
 import com.svg.java.streams.domain.Person;
-import com.svg.java.streams.domain.Sport;
 import com.svg.java.streams.services.PersonService;
 
 import java.util.List;
