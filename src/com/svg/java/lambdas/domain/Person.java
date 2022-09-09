@@ -7,9 +7,9 @@ import lombok.Data;
 @AllArgsConstructor
 public class Person {
 
-    private final String name;
-    private final String surname;
-    private final int age;
+    private String name;
+    private String surname;
+    private int age;
 
     public boolean isRetired() {
         return this.age > 65;

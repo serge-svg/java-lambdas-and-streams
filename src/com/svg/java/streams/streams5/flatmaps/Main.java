@@ -59,7 +59,6 @@ public class Main {
                 .sum()
         );
 
-
         List<List<Integer>> bidimensionalList = new ArrayList<List<Integer>>(Arrays.asList(
                 new ArrayList<Integer>(Arrays.asList(1, 2)),
                 new ArrayList<Integer>(Arrays.asList(3, 4))
@@ -68,7 +67,7 @@ public class Main {
         System.out.printf("Flatting lists: %s %n",
             bidimensionalList
                 .stream()
-                .flatMap( internalList -> internalList.stream())
+                .flatMap(internalList -> internalList.stream())
                 .collect(Collectors.toList())
         );
 

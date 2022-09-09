@@ -24,9 +24,9 @@ public class Main {
                 //.forEach(System.out::println);
                 .forEach(Main::print);
 
-        List<Integer> numeros = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4)); // [1, 2, 3, 4]
+        List<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4)); // [1, 2, 3, 4]
 
-        numeros.stream()
+        numbers.stream()
                 .map(x -> x * x)
                 .forEach(System.out::println);
 

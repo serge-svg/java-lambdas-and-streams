@@ -1,4 +1,4 @@
-package com.svg.java.lambdas.generinference;
+package com.svg.java.lambdas.genericinterface;
 
 import java.util.ArrayList;
 import java.util.List;

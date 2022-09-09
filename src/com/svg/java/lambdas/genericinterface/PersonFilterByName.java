@@ -1,4 +1,4 @@
-package com.svg.java.lambdas.generinference;
+package com.svg.java.lambdas.genericinterface;
 
 public class PersonFilterByName implements Filter<Person> {
 
